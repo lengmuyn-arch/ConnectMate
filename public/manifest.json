@@ -1,0 +1,28 @@
+{
+  "id": "/",
+  "name": "ConnectMate - Kết Nối Đời Thực",
+  "short_name": "ConnectMate",
+  "description": "Ứng dụng thông minh giảm Phubbing, gắn kết bạn bè và gia đình.",
+  "theme_color": "#2B2118",
+  "background_color": "#F8EFE8",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "/",
+  "scope": "/",
+  "lang": "vi",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["lifestyle", "social", "productivity"]
+}

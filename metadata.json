@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix ConnectMate",
+  "description": "Ứng dụng ConnectMate - Cùng Buông Điện Thoại, Kết Nối Đời Thực với giao diện Neo-Brutalist dễ thương chuẩn Figma.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

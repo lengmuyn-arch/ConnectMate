@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" rx="120" fill="#2B2118"/>
+  <rect x="24" y="24" width="464" height="464" rx="100" fill="#0ABAB5" stroke="#2B2118" stroke-width="16"/>
+  
+  <!-- Sparkles -->
+  <path d="M 120 100 L 130 130 L 160 140 L 130 150 L 120 180 L 110 150 L 80 140 L 110 130 Z" fill="#FDFD96" stroke="#2B2118" stroke-width="6"/>
+  <path d="M 390 120 L 396 140 L 416 146 L 396 152 L 390 172 L 384 152 L 364 146 L 384 140 Z" fill="#FDFD96" stroke="#2B2118" stroke-width="5"/>
+  
+  <!-- Big Baby Sprout -->
+  <circle cx="256" cy="270" r="130" fill="#F8EFE8" stroke="#2B2118" stroke-width="16"/>
+  
+  <!-- Sprout leaves on head -->
+  <path d="M 256 140 C 230 90 170 100 180 140 C 190 180 240 150 256 140 Z" fill="#7FA478" stroke="#2B2118" stroke-width="10"/>
+  <path d="M 256 140 C 282 90 342 100 332 140 C 322 180 272 150 256 140 Z" fill="#7FA478" stroke="#2B2118" stroke-width="10"/>
+  
+  <!-- Eyes -->
+  <circle cx="210" cy="260" r="16" fill="#2B2118"/>
+  <circle cx="214" cy="254" r="5" fill="#FFFFFF"/>
+  <circle cx="302" cy="260" r="16" fill="#2B2118"/>
+  <circle cx="306" cy="254" r="5" fill="#FFFFFF"/>
+  
+  <!-- Blush -->
+  <ellipse cx="180" cy="285" rx="20" ry="12" fill="#F4BAB3"/>
+  <ellipse cx="332" cy="285" rx="20" ry="12" fill="#F4BAB3"/>
+  
+  <!-- Happy Smile -->
+  <path d="M 230 285 Q 256 315 282 285" fill="none" stroke="#2B2118" stroke-width="12" stroke-linecap="round"/>
+  
+  <!-- Banner bottom text -->
+  <rect x="76" y="380" width="360" height="70" rx="35" fill="#DFB2FA" stroke="#2B2118" stroke-width="12"/>
+  <text x="256" y="426" font-family="'Nunito', 'Arial-Black', sans-serif" font-weight="900" font-size="34" fill="#2B2118" text-anchor="middle" letter-spacing="2">CONNECTMATE</text>
+</svg>

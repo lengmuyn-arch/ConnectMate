@@ -1,0 +1,20 @@
+{
+  "appId": "com.connectmate.app",
+  "appName": "ConnectMate",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "backgroundColor": "#F8EFE8",
+  "android": {
+    "allowMixedContent": true,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": true,
+    "backgroundColor": "#F8EFE8"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1500,
+      "backgroundColor": "#2B2118",
+      "showSpinner": false
+    }
+  }
+}

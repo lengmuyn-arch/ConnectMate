@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F8EFE8;
+    color: #2B2118;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .font-mono-code {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Neo-Brutalist Pop Shadows */
+.pop-shadow {
+  box-shadow: 4px 4px 0px #2B2118;
+}
+
+.pop-shadow-sm {
+  box-shadow: 2px 2px 0px #2B2118;
+}
+
+.pop-shadow-lg {
+  box-shadow: 6px 6px 0px #2B2118;
+}
+
+.pop-shadow-teal {
+  box-shadow: 4px 4px 0px #0ABAB5;
+}
+
+/* Button click tactile feel */
+.btn-press {
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.btn-press:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #2B2118;
+}
+
+/* Custom scrollbar for mobile feel */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #F8EFE8;
+}
+::-webkit-scrollbar-thumb {
+  background: #CFE3DC;
+  border-radius: 9999px;
+  border: 1px solid #2B2118;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-4px) rotate(2deg); }
+}
+
+.animate-float-slow {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-fast {
+  animation: float 1.8s ease-in-out infinite;
+}
