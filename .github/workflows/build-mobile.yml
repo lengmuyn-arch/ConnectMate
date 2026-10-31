@@ -42,7 +42,7 @@ jobs:
 
       - name: Install Capacitor CLI & Android Core
         run: |
-          npm install @capacitor/core @capacitor/cli @capacitor/android --legacy-peer-deps
+          npm install @capacitor/core@latest @capacitor/cli@latest @capacitor/android@latest --legacy-peer-deps
 
       - name: Initialize Capacitor Android Project properly
         run: |
@@ -50,7 +50,7 @@ jobs:
           npx cap init ConnectMate com.connectmate.app --web-dir dist --yes || true
           npx cap add android
 
-      - name: Enforce Minimum SDK 31 (Android 12+) in build.gradle
+      - name: Enforce Minimum SDK 31 (Android 12+) and fix rootProject syntax in build.gradle
         run: |
           BUILD_GRADLE="android/build.gradle"
           if [ -f "$BUILD_GRADLE" ]; then
@@ -62,6 +62,8 @@ jobs:
             sed -i 's/minSdk [0-9]*/minSdk 31/g' "$APP_GRADLE" || true
             sed -i 's/minSdkVersion [0-9]*/minSdkVersion 31/g' "$APP_GRADLE" || true
             sed -i 's/targetSdk [0-9]*/targetSdk 34/g' "$APP_GRADLE" || true
+            # Fix potential rootProject null reference in older plugin blocks
+            sed -i "s/rootProject.ext./rootProject.hasProperty('ext') ? rootProject.ext. : /g" "$APP_GRADLE" || true
           fi
 
       - name: Sync Web Assets to Android
