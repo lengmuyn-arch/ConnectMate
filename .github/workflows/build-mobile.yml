@@ -46,8 +46,12 @@ jobs:
 
       - name: Initialize Capacitor Android Project
         run: |
-          npx cap init ConnectMate com.connectmate.app --web-dir dist --yes || true
-          npx cap add android
+          if [ ! -d "android" ]; then
+            npx cap init ConnectMate com.connectmate.app --web-dir dist
+            npx cap add android
+          else
+            echo "Android platform already exists, skipping init/add."
+          fi
 
       - name: Enforce Minimum SDK 31 (Android 12+) in build.gradle
         run: |
