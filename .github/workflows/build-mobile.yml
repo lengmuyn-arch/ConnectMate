@@ -46,13 +46,9 @@ jobs:
 
       - name: Initialize Capacitor Android Project properly
         run: |
-          if [ ! -d "android/app" ]; then
-            rm -rf android
-            npx cap init ConnectMate com.connectmate.app --web-dir dist
-            npx cap add android
-          else
-            echo "Android native project already fully exists."
-          fi
+          rm -rf android
+          npx cap init ConnectMate com.connectmate.app --web-dir dist --yes || true
+          npx cap add android
 
       - name: Enforce Minimum SDK 31 (Android 12+) in build.gradle
         run: |
@@ -71,10 +67,17 @@ jobs:
       - name: Sync Web Assets to Android
         run: npx cap sync android
 
+      - name: Ensure gradlew exists and is executable
+        run: |
+          if [ ! -f "android/gradlew" ]; then
+            cd android
+            gradle wrapper
+          fi
+          chmod +x android/gradlew
+
       - name: Build Debug APK with Gradle inside android root
         run: |
           cd android
-          chmod +x gradlew
           ./gradlew assembleDebug
 
       - name: Upload Android APK
