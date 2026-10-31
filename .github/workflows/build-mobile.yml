@@ -22,10 +22,10 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Set up Node.js
+      - name: Set up Node.js 22 (Required by latest Capacitor)
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Install Dependencies (with legacy-peer-deps for Vite/Esbuild compatibility)
         run: |
