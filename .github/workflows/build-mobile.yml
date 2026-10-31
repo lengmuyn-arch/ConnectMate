@@ -70,10 +70,19 @@ jobs:
       - name: Sync Web Assets to Android
         run: npx cap sync android
 
+      - name: Ensure Android Gradle Wrapper Exists
+        run: |
+          if [ ! -f "android/gradlew" ]; then
+            cd android
+            gradle wrapper
+            chmod +x gradlew
+          else
+            chmod +x android/gradlew
+          fi
+
       - name: Build Debug APK with Gradle
         run: |
           cd android
-          chmod +x gradlew
           ./gradlew assembleDebug
 
       - name: Upload Android APK
